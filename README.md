@@ -24,7 +24,7 @@ Proceedings of the 26th Network and Distributed System Security Symposium (NDSS 
 - Firstly, install the corresponding environment according to  [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) repo. Run 'get_output.py' and 'adv_get_output.py' to get every layer's outputs of the model for benign dataset and adversarial test dataset. Please put results in 'output' and 'adv_output' packages, respectively.  
 - Secondly, after flatten, the outputs of convolution layes are too large to be used to train a osvm. In this step, we use Principal component analysis (PCA) to reduce dimensionality of the flattened convolution layes' outputs to (60000, 5000) and (100, 5000), for benign dataset and adversarial testing dataset respectively. If your server is good enough, you can skip this step.  
   
-**(For the following steps, you can also use [thundersvm](https://github.com/Xtra-Computing/thundersvm) to accelerate the osvm training process.)**  
+  **(For the following steps, you can also use [thundersvm](https://github.com/Xtra-Computing/thundersvm) to accelerate the osvm training process.)**  
 - Thirdly, run 'svm_2.1.py' to train osvms according to every layer's output. All of the results will be stored in 'SVM' package.  
 - Fourthly, run 'svm_2.2.py' to train osvms according to every two conjunctive layers' output. All of the results will be stored in 'SVM_2' package.  
 - In the end, run 'svm_3.py' to train the final osvm using the 'decision_function' results from 'svm_2.1' and 'svm_2.2'. All of the results are stored in 'SVM_3' package.  
