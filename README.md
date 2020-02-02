@@ -17,7 +17,7 @@ We re-use code from [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) repo 
 
 - Step 1: Get internal values
 
-```bash
+```
 $ python get_output.py (adv_get_output.py)
 ```
 
@@ -25,7 +25,7 @@ The output resutls will be in folder 'output' ('adv_output').
 
 - Step 2.0: PCA
 
-```bash
+```
 $ python PCA.py
 ```
 
@@ -33,7 +33,7 @@ The outputs of some layes are too large to be used to train a osvm. In this step
   
 - Step 2.1: VI
 
-```bash
+```
 $ python svm_2.1.py
 ```
 
@@ -41,13 +41,13 @@ All of the results will be stored in 'SVM' folder.
 
 - Step 2.2: PI
 
-```bash
+```
 $ python svm_2.2.py
 ```
 
 - Step 3: Detection
 
-```bash
+```
 $ python svm_3.py
 ```
 
