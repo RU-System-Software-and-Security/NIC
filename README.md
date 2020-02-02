@@ -23,8 +23,6 @@ $ python get_output.py (adv_get_output.py)
 
 The output resutls will be in folder 'output' ('adv_output').
 
-- Step 2: Training
-
 - Step 2.0: PCA
 
 ```bash
