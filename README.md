@@ -1,5 +1,7 @@
 # NIC
 
+An adversarial example detection tool.
+
 ---
 ## Dependencies and acknoledgement:
 1. [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) (Included as a folder in this project)
@@ -8,13 +10,15 @@
 
 ---
 ## Quick Start
-**Please follow the steps below, run the files one by one.**   
-- Firstly, install the corresponding environment according to  [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) repo. Run 'get_output.py' and 'adv_get_output.py' to get every layer's outputs of the model for benign dataset and adversarial test dataset. Please put results in 'output' and 'adv_output' packages, respectively.  
+
+- Step 0: dependencies.
+
+We re-use code from [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) repo (Thank you!) to generate adv examples etc., and thus to use it, you need to install the required dependencies.
 
 - Step 1: Get internal values
 
 ```bash
-$ python get_output.py (adv_get_output.py(
+$ python get_output.py (adv_get_output.py)
 ```
 
 The output resutls will be in folder 'output' ('adv_output').
@@ -57,6 +61,3 @@ All of the results are stored in 'SVM_3' folder.
 - We recommand [thundersvm](https://github.com/Xtra-Computing/thundersvm) to accelerate the osvm training process.
 - You can change the PCA function parameters based on computing resources.
 - We recommand tuning each PI and VI before tuning the final detector
-
-
-
