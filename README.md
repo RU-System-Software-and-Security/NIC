@@ -58,4 +58,4 @@ All of the results are stored in 'SVM_3' folder.
 
 - We recommand [thundersvm](https://github.com/Xtra-Computing/thundersvm) to accelerate the osvm training process.
 - You can change the [PCA function parameters](https://github.com/Jethro85/NIC/blob/dfa45ea2d5f5d9fc2bc69b6e9a37dff4846313a7/PCA.py#L18) based on computing resources.
-- We recommand tuning each PI and VI before tuning the final detector
+- We recommend tuning each PI and VI before tuning the final detector
