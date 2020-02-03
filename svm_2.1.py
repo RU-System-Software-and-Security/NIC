@@ -17,7 +17,19 @@ if __name__ == '__main__':
         print('h layer', i, output.shape)
         output = output.reshape((60000, -1))
         print(output.shape)
-    
+
+        '''
+        We recommend tuning each PI before tuning the final detector. 
+        
+        What we have done is try to make the classify accuracy of benign inputs as high as possible, and make the misclassification rate of adversarial pictures as low as possible. 
+        The parameters we use to train the osvms are as follows:
+        
+        When i = 0 and 1, we use nu=0.01 and gamma=0.5; 
+        When i = 2 to 6, we use nu=0.1 and gamma=0.1; We don't have enough computing resources. If you have, you can try nu=0.01 and gamma=0.5
+        When i = 7 and 8, we use nu=0.01 and gamma=1;
+        When i = 9 to 11, we use nu=0.1 and gamma=0.1;
+        
+        '''
         clf = OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
         clf.fit(output)
 
