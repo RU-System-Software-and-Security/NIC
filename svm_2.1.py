@@ -25,7 +25,7 @@ if __name__ == '__main__':
         The parameters we use to train the osvms are as follows:
         
         When i = 0 and 1, we use nu=0.01 and gamma=0.5; 
-        When i = 2 to 6, we use nu=0.1 and gamma=0.1; We don't have enough computing resources. If you have, you can try nu=0.01 and gamma=0.5
+        When i = 2 to 6, we use nu=0.1 and gamma=0.1; If you have enough computing resources, you can try nu=0.01 and gamma=0.5
         When i = 7 and 8, we use nu=0.01 and gamma=1;
         When i = 9 to 11, we use nu=0.1 and gamma=0.1;
         
