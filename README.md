@@ -3,7 +3,7 @@
 An adversarial example detection tool.
 
 ---
-## Dependencies and acknowledgement:
+## Dependencies and Acknowledgement:
 1. [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) (Included as a folder in this project)
 2. [thundersvm](https://github.com/Xtra-Computing/thundersvm)
 3. sklearn
