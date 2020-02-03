@@ -60,7 +60,19 @@ if __name__ == '__main__':
 
         file_name = './SVM_2/{0}_{1}_output_values.npy'.format(files_name[i], files_name[j+1])
         np.save(file_name, output)
-
+        '''
+        We recommend tuning each VI before tuning the final detector.
+        
+        What we have done is try to make the classify accuracy of benign inputs as high as possible, and make the misclassification rate of adversarial pictures as low as possible.   
+        The parameters we use to train the osvms are as follows:
+        
+        When i = 1, 3, 4, 7 to 10, we use nu=0.1 and gamma='scale'; If you use thundersvm to accelerate the osvm training process,
+        you may try gamma='auto' because thundersvm don't have 'scale' value. 
+        
+        When i = 0, 2, 5, 6, we use nu=0.01 and gamma=0.5. You can try another pairs of parameters. Our parameters for these four layers
+        are not ideal.
+          
+        '''
         clf = svm.OneClassSVM(nu=0.01, kernel="rbf", gamma=0.5)
         clf.fit(output)
 
