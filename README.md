@@ -3,7 +3,7 @@
 An adversarial example detection tool.
 
 ---
-## Dependencies and acknoledgement:
+## Dependencies and acknowledgement:
 1. [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) (Included as a folder in this project)
 2. [thundersvm](https://github.com/Xtra-Computing/thundersvm)
 3. sklearn
@@ -29,7 +29,7 @@ The output resutls will be in folder 'output' ('adv_output').
 $ python PCA.py
 ```
 
-The outputs of some layes are too large to be used to train a osvm. In this step, we use Principal component analysis (PCA) to reduce dimensionality. Currently, we use 5000 as the default value. This is not necessary if you have enough computing resources.
+The outputs of some layes are too large to be used to train an osvm. In this step, we use Principal Component Analysis (PCA) to reduce dimensionality. Currently, we use 5000 as the default value. This is not necessary if you have enough computing resources.
   
 - Step 2.1: VI
 
@@ -45,6 +45,8 @@ All of the results will be stored in 'SVM' folder.
 $ python svm_2.2.py
 ```
 
+All of the results will be stored in 'SVM_2' folder.
+
 - Step 3: Detection
 
 ```
@@ -57,5 +59,5 @@ All of the results are stored in 'SVM_3' folder.
 ## Tuning and Speedup
 
 - We recommend [thundersvm](https://github.com/Xtra-Computing/thundersvm) to accelerate the osvm training process.
-- You can change the [PCA function parameters](https://github.com/Jethro85/NIC/blob/dfa45ea2d5f5d9fc2bc69b6e9a37dff4846313a7/PCA.py#L18) based on computing resources.
+- You can change the [PCA function parameters](https://github.com/Jethro85/NIC/blob/dfa45ea2d5f5d9fc2bc69b6e9a37dff4846313a7/PCA.py#L18) based on your computing resources.
 - We recommend tuning each [PI](https://github.com/Jethro85/NIC/blob/e226c8d93352055561783ffc6fd766a811f81a63/svm_2.1.py#L21-L32) and [VI](https://github.com/Jethro85/NIC/blob/e226c8d93352055561783ffc6fd766a811f81a63/svm_2.2.py#L63-L75) before tuning the final detector.
