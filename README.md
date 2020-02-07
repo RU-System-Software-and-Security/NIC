@@ -21,7 +21,7 @@ We re-use code from [EvadeML-Zoo](https://github.com/mzweilin/EvadeML-Zoo) repo 
 $ python get_output.py (adv_get_output.py)
 ```
 
-The output resutls will be in folder 'output' ('adv_output').
+The output results will be in folder 'output' ('adv_output').
 
 - Step 2.0: PCA
 
